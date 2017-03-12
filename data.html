@@ -1,0 +1,1435 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+            Python入门_Python入门教程_python入门视频教程-慕课网
+    </title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="renderer" content="webkit">
+<meta property="qc:admins" content="77103107776157736375" />
+<meta property="wb:webmaster" content="c4f857219bfae3cb" />
+<meta http-equiv="Access-Control-Allow-Origin" content="*" />
+<meta http-equiv="Cache-Control" content="no-transform " />
+
+<meta name="Keywords" content="" />
+
+<meta name="description" content="本课程是Python开发的入门课程，将介绍Python语言的特点和适用范围，Python基本的数据类型，条件判断和循环，函数，以及Python特有的切片和列表生成式。让您快速入门并编写简单的Python程序" />
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/static/moco/v1.0/dist/css/moco.min.css?t=2017022402355" type="text/css" />
+
+<script type="text/javascript">
+
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('!4(){3 6=a;3 l=4(){3 b,e=9 y("(^| )"+"c=([^;]*)(;|$)");j(b=h.g.z(e)){k w(b[2])}x{k a}};3 8=4(t){3 f=l();3 7=9 o();7.A(7.d()+B*i*i*r);h.g="c="+t+";s="+7.M()+";N=/;L=O.m";j(t&&t!=f){Q.P.G()}};3 5=9 E();5.H=4(){K(6);6=a;8(0)};5.J=4(){8(1)};6=I(4(){5.n="";8(1)},F);5.n=\'R://p.u.m/p/v/q/D.C?t=\'+9 o().d()}()',54,54,'|||var|function|imgobj|timer|exp|setcookie|new|null|arr|IMCDNS|getTime|reg|_0|cookie|document|60|if|return|getcookie|com|src|Date|static|common|1000|expires||mukewang|img|unescape|else|RegExp|match|setTime|24|png|logo|Image|3000|reload|onload|setTimeout|onerror|clearTimeout|domain|toGMTString|path|imooc|location|window|http'.split('|'),0,{}))
+
+</script>
+
+
+<script type="text/javascript">
+
+var OP_CONFIG={"module":"course","page":"learn"};
+var isLogin = 0;
+var is_choice = "";
+var seajsTimestamp="v=2017022402355";
+var _msg_unread = 0; 
+var _not_unread = 0; 
+var _cart_num = 0;
+</script>
+
+
+
+
+
+
+
+
+<script>
+/*学习页通用配置*/
+var GC = {
+  course: {
+    id: 177,
+    name: 'Python入门',
+    pic: '',
+    video_url: ''
+  },
+  classmates: 20 // 你的同学一页显示数量
+};
+
+
+</script>
+<script>
+
+var hasLearn;
+    hasLearn = 0;
+
+</script>
+
+
+
+
+<link rel="stylesheet" href="http://static.mukewang.com/static/css/??base.css,common/common-less.css?t=2.5,course/common-less.css,course/view-less.css,course/learn-less.css,u/dynamic/home-less.css?v=2017022402355" type="text/css" />
+</head>
+<body >
+
+<div id="header">
+    <div class="page-container" id="nav">
+        <div id="logo" class="logo"><a href="/" target="_self" class="hide-text" title="首页">慕课网</a></div>
+
+
+        <button type="button" class="navbar-toggle visible-xs-block js-show-menu" >
+            <i class="icon-menu"></i>
+        </button>
+        <ul class="nav-item">
+                        <li class="set-btn visible-xs-block"><a href="/user/newlogin" target="_self">登录</a> / <a href="/user/newsignup" target="_self">注册</a></li>
+                        
+            <li>
+                <a href="/course/list" class="active" target="_self">课程</a>
+            </li>
+            <li><a href="/course/program" class="program-nav " target="_self">职业路径<i class="icn-new"></i></a></li>
+            <li>
+                <a href="http://coding.imooc.com" target="_self">实战</a>
+            </li>
+            <li><a href="/wenda"  target="_self">猿问</a></li>
+            <li><a href="/article"  target="_self">手记</a></li>
+            
+        </ul>
+                <div id="login-area">
+            <ul class="header-unlogin clearfix">
+                <li class="shop-cart" id="shop-cart">
+                    <a href="http://order.imooc.com/pay/cart" class="shop-cart-icon" target="_blank">
+                        <span class="icon-shopping-cart js-endcart"></span>
+                        <span class="shopping_icon js-cart-num" data-ordernum="0"  data-cartnum="0" style='display: none'>0</span>
+                        <span>购物车</span>
+                    </a>
+                    <div class="my-cart" id="js-my-cart"></div>
+                </li>
+                <li class="header-signin">
+                    <a href="#" id="js-signin-btn">登录</a>
+                </li>
+                <li class="header-signup">
+                    <a href="#" id="js-signup-btn">注册</a>
+                </li>
+            </ul>
+        </div>
+                <div class='search-warp clearfix' style='min-width: 32px; height: 60px;'>
+                            <div class="pa searchTags" >
+                                    <a href="http://class.imooc.com/sc/20" target="_blank">前端入门</a>
+                                    <a href="http://coding.imooc.com/class/82.html" target="_blank">算法面试</a>
+                                </div>
+            
+            <div class="search-area" data-search="top-banner">
+                <input class="search-input" data-suggest-trigger="suggest-trigger"      type="text" autocomplete="off">
+                <input type='hidden' class='btn_search' data-search-btn="search-btn" />
+                <ul class="search-area-result" data-suggest-result="suggest-result">
+                </ul>
+            </div>
+            <div class='showhide-search' data-show='no'><i class='icon-search'></i></div>
+        </div>
+    </div>
+</div>
+
+<div class="bindHintBox js-bindHintBox hide">
+    <div class="pr">
+        为了账号安全，请及时绑定邮箱和手机<a href="/user/setbindsns" class="ml20 color-red" target="_blank">立即绑定</a>
+        <button  class="closeBindHint js-closeBindHint" type="button"></button>
+        <div class="arrow"> </div>
+    </div>
+</div>
+
+
+<div id="main">
+
+<div class="course-infos">
+    <div class="w pr">
+        <div class="path">  
+            <a href="/course/list">课程</a>
+                        <i class="path-split">\</i><a href="/course/list?c=be">后端开发</a>
+                                    <i class="path-split">\</i><a href="/course/list?c=python">Python</a>
+                        <i class="path-split">\</i><a href="/learn/177"><span>Python入门</a></span>
+        </div>
+        <div class="hd clearfix">
+            <h2 class="l">Python入门</h2>
+                    </div>
+
+        <div class="statics clearfix">
+            
+                        <div class="moco-btn l learn-btn green-btn red-btn"> 
+                <a href="/video/3370" class="J-learn-course">开始学习</a>
+                <em></em>
+                <i class="follow-action js-follow-action"></i>
+            </div>
+                        
+            
+                        
+            <div class="static-item l">
+                <span class="meta">学习人数</span>
+                <span class="meta-value js-learn-num"></span>
+                            </div>
+            <div class="static-item l">
+                <span class="meta">难度级别</span>
+                <span class="meta-value">初级</span>
+                <em></em>
+            </div>
+            <div class="static-item l">
+                <span class="meta">课程时长</span>
+                <span class="meta-value"> 5小时 0分</span>
+                <em></em>
+            </div>
+            <div class="static-item l score-btn">
+                <span class="meta">综合评分</span>
+                <span class="meta-value">9.5</span>
+                <em></em>
+                
+                                
+                <div class="score-wrap icon-drop_up triangle">
+                    <div class="score-box">
+                        <a href="/coursescore/177" class="person-num">
+                            <span class="person-num l">1579人评价</span>
+                        </a>
+                                                                                <a href="/coursescore/177?page=1" class="evaluation-btn r">查看评价</a>
+                                                                            <div class="score-detail-box">
+                            <div class="score-static-item">
+                                <span class="meta-value">9.8</span>
+                                <span class="meta">内容实用</span>
+                            </div>
+                            <div class="score-static-item">
+                                <span class="meta-value">9.5</span>
+                                <span class="meta">简洁易懂</span>
+                                <em></em>
+                            </div>
+                            <div class="score-static-item">
+                                <span class="meta-value">9.2</span>
+                                <span class="meta">逻辑清晰</span>
+                                <em></em>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="extra">
+            <!-- credit -->
+            <div class="share-rl-tips share-posi js-share-statue">
+                <span class="icon-drop_up share-triangle"></span>
+                <span>分享即可 +</span><strong>1积分</strong>
+            </div>
+            <!-- share -->
+            <div class="share-action r bdsharebuttonbox">
+                <a href="javascript:;" class="share wx js-share icon-share-weichat" data-cmd="weixin"></a>
+                <a href="javascript:;" class="share qq js-share icon-share-qq" data-cmd="qzone"></a>
+                <a href="javascript:;" class="share sina js-share icon-share-weibo" data-cmd="tsina"></a>
+            </div>
+        </div>
+    </div>
+    <div class="info-bg" id="js-info-bg">
+        <div class="cover-img-wrap">
+        <img data-src="http://img.mukewang.com/55af49d60001bbe006000338.jpg" alt="" style="display: none" id="js-cover-img">
+        </div>
+        <div class="cover-mask"></div>
+    </div>
+    
+        
+</div>
+
+
+<div class="course-info-main clearfix w">
+    <div class="content-wrap">
+        <div class="content">
+                          	<div id="notice" class="clearfix">
+  		<div class="l">
+  			<strong>课程公告 : </strong> 
+  			<a  href="javascript:void(0)">官方python技术讨论群：QQ221828022</a> 
+  		</div> 
+  	</div>
+<!-- 课程公告 -->
+                        <!-- 课程简介 -->
+            <div class="course-brief">
+                <p class="auto-wrap">简介：Python教程基础分《Python入门》和《Python进阶》两门课程，本教程是Python第一门课程，是Python开发的入门教程，将介绍Python语言的特点和适用范围，Python基本的数据类型，条件判断和循环，函数，以及Python特有的切片和列表生成式。希望本python教程能够让您快速入门并编写简单的Python程序。</p>
+            </div>
+            <!-- 课程简介 end -->
+            <div class="mod-tab-menu ">
+	<ul class="course-menu clearfix">
+		<li><a class="ui-tabs-active active" id="learnOn"  href="/learn/177"><span>章节</span></a></li>
+		<li><a id="commentOn" class="" href="/comment/177"><span>评论</span></a></li>
+		<li><a id="qaOn" class="" href="/qa/177/t/1?page=1"><span>问答</span></a></li>
+		<li><a id="noteOn" class="" href="/note/177?sort=last&page=1"><span>笔记</span></a></li>
+	    <!--
+        <li><a id="wikiOn" class="" href="/wiki/177">WIKI</a></li>
+        -->
+	</ul>
+	
+</div><!-- 课程面板 -->
+            <!-- 课程章节 -->
+            <div class="mod-chapters">
+                                        <div class="chapter ">
+                    <!-- 章节标题 -->
+                    <h3>
+                        
+                        <span class="icon-drop_down js-close"></span>
+                        <strong>
+                            <i class="icon-chapter"></i>
+                            第1章 课程介绍
+                            <div class="icon-info chapter-info">
+                                <i class="icon-drop_up triangle">
+                                    <div class="chapter-introubox">
+                                        <div class="chapter-content">介绍Python的诞生，Python有什么独特的特点，它适合用在哪些地方，不适合用在哪些地方，以及Python在现实世界中的应用。</div>
+                                    </div>
+                                </i>
+                            </div>
+                        </strong>
+                        
+                    </h3>
+                    <!-- 章节标题 end -->
+                    <!-- 章节小节 -->
+                                        <ul class="video">
+                                                <li data-media-id="3370">
+                                                            <a href='/video/3370' class="J-media-item">
+                                    <i class="icon-video type"></i>
+                                    1-1 Python入门课程介绍 
+                                                                            (04:16)
+                                                                        
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                            </ul>
+                                        <!-- 章节小节 end -->
+                </div>
+                            <div class="chapter ">
+                    <!-- 章节标题 -->
+                    <h3>
+                        
+                        <span class="icon-drop_down js-close"></span>
+                        <strong>
+                            <i class="icon-chapter"></i>
+                            第2章 安装Python
+                            <div class="icon-info chapter-info">
+                                <i class="icon-drop_up triangle">
+                                    <div class="chapter-introubox">
+                                        <div class="chapter-content">讲解如何从零开始下载、安装并设置Python开发环境，如何启动和关闭Python解释器，并编写第一个Python程序</div>
+                                    </div>
+                                </i>
+                            </div>
+                        </strong>
+                        
+                    </h3>
+                    <!-- 章节标题 end -->
+                    <!-- 章节小节 -->
+                                        <ul class="video">
+                                                <li data-media-id="3325">
+                                                            <a href='/video/3325' class="J-media-item">
+                                    <i class="icon-video type"></i>
+                                    2-1 选择Python版本 
+                                                                            (00:51)
+                                                                        
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3326">
+                                                            <a href='/video/3326' class="J-media-item">
+                                    <i class="icon-video type"></i>
+                                    2-2 Windows上安装Python 
+                                                                            (02:22)
+                                                                        
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3327">
+                                                            <a href='/video/3327' class="J-media-item">
+                                    <i class="icon-video type"></i>
+                                    2-3 第一个Python程序 
+                                                                            (02:33)
+                                                                        
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                            </ul>
+                                        <!-- 章节小节 end -->
+                </div>
+                            <div class="chapter chapter-active">
+                    <!-- 章节标题 -->
+                    <h3>
+                        
+                        <span class="icon-drop_down js-close"></span>
+                        <strong>
+                            <i class="icon-chapter"></i>
+                            第3章 Python变量和数据类型
+                            <div class="icon-info chapter-info">
+                                <i class="icon-drop_up triangle">
+                                    <div class="chapter-introubox">
+                                        <div class="chapter-content">讲解Python基本的数据类型，包括整数、浮点数、字符串和布尔类型，以及变量的概念和基本的数据运算。</div>
+                                    </div>
+                                </i>
+                            </div>
+                        </strong>
+                        
+                    </h3>
+                    <!-- 章节标题 end -->
+                    <!-- 章节小节 -->
+                                        <ul class="video">
+                                                <li data-media-id="3255">
+                                                            <a href='/code/3255' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    3-1 Python中数据类型
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3328">
+                                                            <a href='/code/3328' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    3-2 Python之print语句
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3575">
+                                                            <a href='/code/3575' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    3-3 Python的注释
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3267">
+                                                            <a href='/code/3267' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    3-4 Python中什么是变量
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3269">
+                                                            <a href='/code/3269' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    3-5 Python中定义字符串
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3270">
+                                                            <a href='/code/3270' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    3-6 Python中raw字符串与多行字符串
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3271">
+                                                            <a href='/code/3271' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    3-7 Python中Unicode字符串
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3272">
+                                                            <a href='/code/3272' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    3-8 Python中整数和浮点数
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3273">
+                                                            <a href='/code/3273' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    3-9 Python中布尔类型
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                            </ul>
+                                        <!-- 章节小节 end -->
+                </div>
+                            <div class="chapter ">
+                    <!-- 章节标题 -->
+                    <h3>
+                        
+                        <span class="icon-drop_down js-close"></span>
+                        <strong>
+                            <i class="icon-chapter"></i>
+                            第4章 List和Tuple类型
+                            <div class="icon-info chapter-info">
+                                <i class="icon-drop_up triangle">
+                                    <div class="chapter-introubox">
+                                        <div class="chapter-content">本章讲解Python最常用的两种集合类型：list和tuple，我们可以用list和tuple来表示有序集合。</div>
+                                    </div>
+                                </i>
+                            </div>
+                        </strong>
+                        
+                    </h3>
+                    <!-- 章节标题 end -->
+                    <!-- 章节小节 -->
+                                        <ul class="video">
+                                                <li data-media-id="3355">
+                                                            <a href='/code/3355' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    4-1 Python创建list
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3356">
+                                                            <a href='/code/3356' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    4-2 Python按照索引访问list
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3357">
+                                                            <a href='/code/3357' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    4-3 Python之倒序访问list
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3358">
+                                                            <a href='/code/3358' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    4-4 Python之添加新元素
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3359">
+                                                            <a href='/code/3359' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    4-5 Python从list删除元素
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3360">
+                                                            <a href='/code/3360' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    4-6 Python中替换元素
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3361">
+                                                            <a href='/code/3361' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    4-7 Python之创建tuple
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3362">
+                                                            <a href='/code/3362' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    4-8 Python之创建单元素tuple
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3363">
+                                                            <a href='/code/3363' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    4-9 Python之“可变”的tuple
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                            </ul>
+                                        <!-- 章节小节 end -->
+                </div>
+                            <div class="chapter ">
+                    <!-- 章节标题 -->
+                    <h3>
+                        
+                        <span class="icon-drop_down js-close"></span>
+                        <strong>
+                            <i class="icon-chapter"></i>
+                            第5章 条件判断和循环
+                            <div class="icon-info chapter-info">
+                                <i class="icon-drop_up triangle">
+                                    <div class="chapter-introubox">
+                                        <div class="chapter-content">讲解Python的条件判断和循环语句，利用条件判断和循环来构造程序的执行逻辑。</div>
+                                    </div>
+                                </i>
+                            </div>
+                        </strong>
+                        
+                    </h3>
+                    <!-- 章节标题 end -->
+                    <!-- 章节小节 -->
+                                        <ul class="video">
+                                                <li data-media-id="3421">
+                                                            <a href='/code/3421' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    5-1 Python之if语句
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3422">
+                                                            <a href='/code/3422' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    5-2 Python之 if-else
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3423">
+                                                            <a href='/code/3423' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    5-3 Python之 if-elif-else
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3424">
+                                                            <a href='/code/3424' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    5-4 Python之 for循环
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3425">
+                                                            <a href='/code/3425' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    5-5 Python之 while循环
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3426">
+                                                            <a href='/code/3426' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    5-6 Python之 break退出循环
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3427">
+                                                            <a href='/code/3427' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    5-7 Python之 continue继续循环
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3428">
+                                                            <a href='/code/3428' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    5-8 Python之 多重循环
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                            </ul>
+                                        <!-- 章节小节 end -->
+                </div>
+                            <div class="chapter ">
+                    <!-- 章节标题 -->
+                    <h3>
+                        
+                        <span class="icon-drop_down js-close"></span>
+                        <strong>
+                            <i class="icon-chapter"></i>
+                            第6章 Dict和Set类型
+                            <div class="icon-info chapter-info">
+                                <i class="icon-drop_up triangle">
+                                    <div class="chapter-introubox">
+                                        <div class="chapter-content">讲解Python的另外两种重要的数据类型Dict和Set，可以快速按照关键字检索信息。</div>
+                                    </div>
+                                </i>
+                            </div>
+                        </strong>
+                        
+                    </h3>
+                    <!-- 章节标题 end -->
+                    <!-- 章节小节 -->
+                                        <ul class="video">
+                                                <li data-media-id="3499">
+                                                            <a href='/code/3499' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    6-1 Python之什么是dict
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3500">
+                                                            <a href='/code/3500' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    6-2 Python之访问dict
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3501">
+                                                            <a href='/code/3501' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    6-3 Python中dict的特点
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3502">
+                                                            <a href='/code/3502' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    6-4 Python更新dict
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3503">
+                                                            <a href='/code/3503' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    6-5 Python之 遍历dict
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3504">
+                                                            <a href='/code/3504' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    6-6 Python中什么是set
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3505">
+                                                            <a href='/code/3505' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    6-7 Python之 访问set
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3506">
+                                                            <a href='/code/3506' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    6-8 Python之 set的特点
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3507">
+                                                            <a href='/code/3507' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    6-9 Python之 遍历set
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3508">
+                                                            <a href='/code/3508' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    6-10 Python之 更新set
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                            </ul>
+                                        <!-- 章节小节 end -->
+                </div>
+                            <div class="chapter ">
+                    <!-- 章节标题 -->
+                    <h3>
+                        
+                        <span class="icon-drop_down js-close"></span>
+                        <strong>
+                            <i class="icon-chapter"></i>
+                            第7章 函数
+                            <div class="icon-info chapter-info">
+                                <i class="icon-drop_up triangle">
+                                    <div class="chapter-introubox">
+                                        <div class="chapter-content">介绍Python的代码最基本的抽象类型：函数，以及如何定义和调用函数。</div>
+                                    </div>
+                                </i>
+                            </div>
+                        </strong>
+                        
+                    </h3>
+                    <!-- 章节标题 end -->
+                    <!-- 章节小节 -->
+                                        <ul class="video">
+                                                <li data-media-id="3511">
+                                                            <a href='/code/3511' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    7-1 Python之什么是函数
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3512">
+                                                            <a href='/code/3512' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    7-2 Python之调用函数
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3513">
+                                                            <a href='/code/3513' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    7-3 Python之编写函数
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3514">
+                                                            <a href='/code/3514' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    7-4 Python函数之返回多值
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3515">
+                                                            <a href='/code/3515' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    7-5 Python之递归函数
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3516">
+                                                            <a href='/code/3516' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    7-6 Python之定义默认参数
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3517">
+                                                            <a href='/code/3517' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    7-7 Python之定义可变参数
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                            </ul>
+                                        <!-- 章节小节 end -->
+                </div>
+                            <div class="chapter ">
+                    <!-- 章节标题 -->
+                    <h3>
+                        
+                        <span class="icon-drop_down js-close"></span>
+                        <strong>
+                            <i class="icon-chapter"></i>
+                            第8章 切片
+                            <div class="icon-info chapter-info">
+                                <i class="icon-drop_up triangle">
+                                    <div class="chapter-introubox">
+                                        <div class="chapter-content">介绍Python程序特有的一种“切片”操作，可以以极其简洁的方式快速对列表进行操作。</div>
+                                    </div>
+                                </i>
+                            </div>
+                        </strong>
+                        
+                    </h3>
+                    <!-- 章节标题 end -->
+                    <!-- 章节小节 -->
+                                        <ul class="video">
+                                                <li data-media-id="3534">
+                                                            <a href='/code/3534' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    8-1 对list进行切片
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3535">
+                                                            <a href='/code/3535' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    8-2 倒序切片
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3536">
+                                                            <a href='/code/3536' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    8-3 对字符串切片
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                            </ul>
+                                        <!-- 章节小节 end -->
+                </div>
+                            <div class="chapter ">
+                    <!-- 章节标题 -->
+                    <h3>
+                        
+                        <span class="icon-drop_down js-close"></span>
+                        <strong>
+                            <i class="icon-chapter"></i>
+                            第9章 迭代
+                            <div class="icon-info chapter-info">
+                                <i class="icon-drop_up triangle">
+                                    <div class="chapter-introubox">
+                                        <div class="chapter-content">介绍Python程序中“迭代”的概念，以及各种迭代方式。</div>
+                                    </div>
+                                </i>
+                            </div>
+                        </strong>
+                        
+                    </h3>
+                    <!-- 章节标题 end -->
+                    <!-- 章节小节 -->
+                                        <ul class="video">
+                                                <li data-media-id="3537">
+                                                            <a href='/code/3537' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    9-1 什么是迭代
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3538">
+                                                            <a href='/code/3538' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    9-2 索引迭代
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3539">
+                                                            <a href='/code/3539' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    9-3 迭代dict的value
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3540">
+                                                            <a href='/code/3540' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    9-4 迭代dict的key和value
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                            </ul>
+                                        <!-- 章节小节 end -->
+                </div>
+                            <div class="chapter ">
+                    <!-- 章节标题 -->
+                    <h3>
+                        
+                        <span class="icon-drop_down js-close"></span>
+                        <strong>
+                            <i class="icon-chapter"></i>
+                            第10章 列表生成式
+                            <div class="icon-info chapter-info">
+                                <i class="icon-drop_up triangle">
+                                    <div class="chapter-introubox">
+                                        <div class="chapter-content">介绍Python特有的列表生成式，利用列表生成式，可以通过某种规则快速创建一个列表。</div>
+                                    </div>
+                                </i>
+                            </div>
+                        </strong>
+                        
+                    </h3>
+                    <!-- 章节标题 end -->
+                    <!-- 章节小节 -->
+                                        <ul class="video">
+                                                <li data-media-id="3541">
+                                                            <a href='/code/3541' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    10-1 生成列表
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3542">
+                                                            <a href='/code/3542' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    10-2 复杂表达式
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3543">
+                                                            <a href='/code/3543' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    10-3 条件过滤
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="3544">
+                                                            <a href='/code/3544' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    10-4 多层表达式
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                            </ul>
+                                        <!-- 章节小节 end -->
+                </div>
+                                    </div>
+            <!-- 课程章节 end -->
+        </div><!--content end-->
+        <div class="aside r">
+            <div class="bd">
+    
+        
+        <div class="box mb40 js-usercard-box">
+        <h4>讲师提示</h4>
+                        <div class="teacher-info">
+            <a href="/u/292120/courses?sort=publish" target="_blank" >
+                <img data-userid="292120" class="js-usercard-dialog" src="http://img.mukewang.com/54091d5500013cf202000200-80-80.jpg" width="80" height="80">
+            </a>
+            <span class="tit">
+                <a href="/u/292120/courses?sort=publish" target="_blank">廖雪峰</a><i class="icon-imooc"></i>
+            </span>
+            <span class="job">移动开发工程师</span>
+        </div>
+                                <div class="course-info-tip">
+                        <dl class="first">
+                <dt>课程须知</dt>
+                <dd class="autowrap">如果您了解程序设计的基本概念，会简单使用命令行，了解中学数学函数的概念，那么对课程学习会有很大的帮助，让您学起来得心应手，快速进入Python世界。</dd>
+            </dl>
+                                    <dl>
+                <dt>老师告诉你能学到什么？</dt>
+                <dd class="autowrap">通过本课程的学习，您将学会搭建基本的Python开发环境，以函数为基础编写完整的Python代码，熟练掌握Python的基本数据类型以及list和dict的操作。</dd>
+            </dl>
+                    </div>
+            </div>
+    
+    <div class="js-recom-box"></div>
+
+</div>        </div>
+    </div>
+    <div class="clear"></div>
+
+</div>
+<!-- 视频介绍 -->
+<div id="js-video-wrap" class="video pop-video" style="display:none">
+    <div class="video_box" id="js-video"></div>
+    <a href="javascript:;" class="pop-close icon-close"></a>
+</div>
+
+</div>
+
+<div id="footer" >
+    <div class="waper">
+        <div class="footerwaper clearfix">
+            <div class="followus r">
+                <a class="followus-weixin" href="javascript:;"  target="_blank" title="微信">
+                    <div class="flw-weixin-box"></div>
+                </a>
+                <a class="followus-weibo" href="http://weibo.com/u/3306361973"  target="_blank" title="新浪微博"></a>
+                <a class="followus-qzone" href="http://user.qzone.qq.com/1059809142/" target="_blank" title="QQ空间"></a>
+            </div>
+            <div class="footer_intro l">
+                <div class="footer_link">
+                    <ul>
+                        <li><a href="http://www.imooc.com/" target="_blank">网站首页</a></li>
+                        <li><a href="/about/cooperate" target="_blank" title="企业合作">企业合作</a></li>
+                        <li><a href="/about/job" target="_blank">人才招聘</a></li>
+                        <li> <a href="/about/contact" target="_blank">联系我们</a></li>
+                        <li> <a href="/about/recruit" target="_blank">讲师招募</a></li>
+                        <li> <a href="/about/faq" target="_blank">常见问题</a></li>
+                        <li> <a href="/user/feedback" target="_blank">意见反馈</a></li>
+                        <li><a href="http://daxue.imooc.com/" target="_blank">慕课大学</a></li>
+                        <li> <a href="/about/friendly" target="_blank">友情链接</a></li>
+                       <!--  <li><a href="/corp/index" target="_blank">合作专区</a></li>
+                        <li><a href="/about/us" target="_blank">关于我们</a></li> -->
+                    </ul>
+                </div>
+                <p>Copyright © 2017 imooc.com All Rights Reserved | 京ICP备 13046642号-2</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="J_GotoTop" class="elevator">
+
+    <a href="/user/feedback" class="elevator-msg" target="_blank">
+        <i class="icon-feedback"></i>
+        <span class="">意见反馈</span>
+    </a>
+    <a href="/about/faq" class="elevator-faq" target="_blank">
+        <i class="icon-ques"></i>
+        <span class="">常见问题</span>
+    </a>
+    <a href="http://www.imooc.com/mobile/app" target="_blank" class="elevator-app" >
+        <i class="icon-appdownload"></i>
+        <span class="">APP下载</span>
+        <div class="elevator-app-box"></div>
+    </a>
+    <a href="javascript:void(0)" class="elevator-weixin no-goto" id="js-elevator-weixin" >
+        <i class="icon-wxgzh"></i>
+        <span class="">官方微信</span>
+        <div class="elevator-weixin-box"></div>
+    </a>
+    <a href="javascript:void(0)" class="elevator-top no-goto" style="display:none" id="backTop">
+        <i class="icon-up2"></i>
+        <span class="">返回顶部</span>
+    </a>
+</div>
+
+
+
+<!--script-->
+<script src="/passport/static/scripts/ssologin.js?v=2.0"></script>
+<script type="text/javascript" src="/static/sea-modules/seajs/seajs/2.1.1/sea.js"></script>
+<script type="text/javascript" src="/static/sea_config.js?v="></script>
+<script type="text/javascript">seajs.use("/static/page/"+OP_CONFIG.module+"/"+OP_CONFIG.page);</script>
+
+ 
+
+<script type="text/javascript">
+  (function(){
+    var imgPic = GC.course.pic || 'http://img.mukewang.com/static/img/common/logo.png',
+        text = '我正在参加@慕课网  的一门课程【' + GC.course.name + '】，很不错哦！快来一起学习吧！', //节名称
+        url = 'http://www.imooc.com' + window.location.pathname;
+
+    window._bd_share_config = {
+        "common": {
+            "bdUrl": url,
+            "bdSnsKey": {
+              'tsina':'2254855082'
+            },
+            "bdText": text,
+            "bdMini": "2",
+            "bdMiniList": false,
+            "bdPic": imgPic,
+            "bdStyle": "0",
+            "bdSize": "16"
+        },
+        "share": {}
+    };
+    setTimeout(function(){
+            with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+        },1000)
+
+  })();
+</script>
+<div class="mask"></div>
+
+
+<div style="display: none">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff0cfcccd7b1393990c78efdeebff3968' type='text/javascript'%3E%3C/script%3E"));
+(function (d) {
+window.bd_cpro_rtid="rHT4P1c";
+var s = d.createElement("script");s.type = "text/javascript";s.async = true;s.src = location.protocol + "//cpro.baidu.com/cpro/ui/rt.js";
+var s0 = d.getElementsByTagName("script")[0];s0.parentNode.insertBefore(s, s0);
+})(document);
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</div>
+</body>
+</html>
