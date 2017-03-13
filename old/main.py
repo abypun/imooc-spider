@@ -39,10 +39,10 @@ def get_source():
 
 
 if __name__ == '__main__':
-    get_content('717')
+    get_content('727')
     get_source()
     for i in data:
         print i
-    course_name = u'初识机器学习-理论篇'
-    course = {'course_name': course_name, 'chapter': data}
-    downloader = File_Downloader(course)
+    # course_name = u'Python在数据科学中的应用'
+    # course = {'course_name': course_name, 'chapter': data}
+    # downloader = File_Downloader(course)

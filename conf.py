@@ -1,7 +1,7 @@
 #coding:utf-8
-#全局变量
 import threading
 
+MAIN_URL = 'http://www.imooc.com'
 DOWNLOAD_URL = 'http://www.imooc.com/course/ajaxmediainfo/?mid={}&mode=flash'#下载链接
 COURSEURL = "http://www.imooc.com/learn/"#课程链接
 
