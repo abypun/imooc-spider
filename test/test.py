@@ -6,7 +6,6 @@ f = open("old/data.html", 'r') #　待处理文件
 g = open("haha.html", 'w') # 目标文件
 soup = BeautifulSoup(f.read(), 'html.parser')
 
-# # path = []
 # a = soup.find_all('div', class_="path")
 # data = a[0].get_text().replace('\\', ' ')
 # path = data.split()

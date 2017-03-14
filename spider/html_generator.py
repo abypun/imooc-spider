@@ -8,11 +8,7 @@ from bs4 import BeautifulSoup
 import re
 class HtmlGenerator(object):
     def __init__(self, raw, ):
-        self.chapters = []
-        
-
-
-
+        self.data = {}
 
     def distill(self):
         soup = BeautifulSoup(self.raw, 'html.parser')
@@ -20,6 +16,7 @@ class HtmlGenerator(object):
         a = soup.find_all('div', class_="path")
         data = a[0].get_text().replace('\\', ' ')
         self.path = data.split()
+        self.name = self.path[3]
 
         self.intro = soup.find_all('p', class_="auto-wrap")[0].get_text()
 
@@ -38,19 +35,23 @@ class HtmlGenerator(object):
         self.tip1 = tips[0].get_text()
         self.tip2 = tips[1].get_text()
 
-    def generate(self, source_html, name):
+    def generate(self):
 
         # need change
         srcPath = 'templates' + os.sep + 'imooc.html'
-        destPath = name + os.sep + 'instruction.html'
+        destPath = self.name + os.sep + 'instruction.html'
         try:
             shutil.copy(srcPath,destPath)
         except:
             return
 
         with open(destPath, 'w') as f:
-            raw = f.read()
-            raw.replace('{{title}}', name)
+            ins = f.read()
+            ins.replace('{{title}}', self.name)
+            ins.replace('{{location1}}', self.path[1])
+            ins.replace('{{location2}}', self.path[2])
+            ins.replace('{{intro}}', self.intro)
+            ins.replace('{{intro}}', self.intro)
 
             
 
