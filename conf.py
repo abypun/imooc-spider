@@ -1,18 +1,12 @@
-#coding:utf-8
-import threading
 
-MAIN_URL = 'http://www.imooc.com'
-DOWNLOAD_URL = 'http://www.imooc.com/course/ajaxmediainfo/?mid={}&mode=flash'#下载链接
-COURSEURL = "http://www.imooc.com/learn/"#课程链接
+main_url = 'http://www.imooc.com'
+video_url = 'http://www.imooc.com/course/ajaxmediainfo/?mid={mid}&mode=flash'
+user_agent = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) "
+              "AppleWebKit/537.36 (KHTML, like Gecko) "
+              "Chrome/36.0.1985.143 Safari/537.36")
+headers = {
+    'User-Agent': user_agent,
+    'Referer': main_url,
+}
 
-CHOOSE=['H','M','L']#视频品质
-
-STATE='L'#视频默认品质
-
-LOCK = threading.Lock()#线程锁
-
-INFOR = {'L':u'普清','M':u'高清','H':u'超清'}#视频品质描述
-
-PERSUM=0.0#用于描述总进度
-
-PERLIST=[]#记录每个线程的进度
+QUALITY = ['H', 'M', 'L']
