@@ -6,14 +6,14 @@ from spider.html_generator import HtmlGenerator
 
 if __name__ == '__main__':
     # id = int(raw_input('Input your course id:'))
-    for cid in [177]:
+    for cid in [790]:
         course = Course(cid)
         print "You are about to download [" + course.name + "]"
         print "The following are the videos you will download:"
         for video in course.videos:
             print video['name']
         print "---------------------------------"
-        
+
         html_generator = HtmlGenerator(course.html)
         html_generator.generate()
 

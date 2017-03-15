@@ -37,12 +37,14 @@ class Course(object):
             media_name = ' '.join(text[:2])
             # print media_url
             # print media_name
+            # print media_type
 
             if media_type == 'video':
                 url = 'http://www.imooc.com/course/ajaxmediainfo/?mid={mid}&mode=flash'.replace('{mid}', media_id)
                 cont = requests.get(url).content
                 json = eval(cont.replace('false', '\'\''))
                 media_path = json['data']['result']['mpath']
+                print media_path    
                 if media_path:
                     # need update
                     l_mp4 = media_path[0].replace('\\', '')
