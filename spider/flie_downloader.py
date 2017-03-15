@@ -2,6 +2,7 @@
 import requests
 import os
 from conf import *
+from time import sleep
 
 class FileDownloader(object):
     def __init__(self, course_name, video_urls, quality='H'):
@@ -36,5 +37,6 @@ class FileDownloader(object):
                 return
             with open(video_path, 'wb') as mfile:
                 mfile.write(mp4)
+            sleep(5)
 
 

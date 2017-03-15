@@ -11,7 +11,6 @@ videos:待下载的视频字典列表
 
 import requests
 from bs4 import BeautifulSoup
-from conf import *
 
 
 class Course(object):
@@ -32,7 +31,7 @@ class Course(object):
         self.name = soup.find_all('h2', class_="l")[0].get_text()
         links = soup.find_all('a', class_="J-media-item")
         for link in links:
-            media_url = main_url + link['href']
+            media_url = 'http://www.imooc.com' + link['href']
             media_type, media_id = link['href'].split('/')[1:3]
             text = link.get_text().split()
             media_name = ' '.join(text[:2])
@@ -40,18 +39,20 @@ class Course(object):
             # print media_name
 
             if media_type == 'video':
-                url = video_url.replace('{mid}', media_id)
-                json = eval(requests.get(url).content)
+                url = 'http://www.imooc.com/course/ajaxmediainfo/?mid={mid}&mode=flash'.replace('{mid}', media_id)
+                cont = requests.get(url).content
+                json = eval(cont.replace('false', '\'\''))
                 media_path = json['data']['result']['mpath']
-                # need update
-                l_mp4 = media_path[0].replace('\\', '')
-                m_mp4 = media_path[1].replace('\\', '')
-                h_mp4 = media_path[2].replace('\\', '')
-                self.videos.append({
-                    'name': media_name + '.mp4',
-                    'L': l_mp4,
-                    'M': m_mp4,
-                    'H': h_mp4})
+                if media_path:
+                    # need update
+                    l_mp4 = media_path[0].replace('\\', '')
+                    m_mp4 = media_path[1].replace('\\', '')
+                    h_mp4 = media_path[2].replace('\\', '')
+                    self.videos.append({
+                        'name': media_name + '.mp4',
+                        'L': l_mp4,
+                        'M': m_mp4,
+                        'H': h_mp4})
 
             self.media.append({
                 'media_url': media_url,
